@@ -1,22 +1,470 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STRIKEZONE — Страйкбольный магазин</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/normalize.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог страйкбольного оружия EXAMPLE - автоматы, пистолеты, винтовки, снаряжение">
+    <title>STRIKEZONE — Страйкбольный магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
-  <header>
+    <header class="header" id="header">
+        <div class="header__top-bar">
+            <div class="container">
+                <div class="top-bar">
+                    <div class="top-bar__contacts">
+                        <a href="tel:+74951234567" class="top-bar__link">+7 (495) 123-45-67</a>
+                    </div>
+                    <nav class="top-bar__nav">
+                        <a href="#" class="top-bar__link">Доставка</a>
+                        <a href="#" class="top-bar__link">Оплата</a>
+                        <a href="#" class="top-bar__link">Гарантия</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header__main">
+            <div class="container">
+                <div class="header__content">
+                    <button class="header__burger" id="burgerBtn" aria-label="Меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    
+                    <a href="index.html" class="logo">
+                        <span class="logo__text">EXAMPLE</span>
+                    </a>
+                    
+                    <button class="btn btn--catalog" id="catalogBtn">
+                        <svg class="btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <rect width="8" height="8" fill="currentColor"/>
+                            <rect x="12" width="8" height="8" fill="currentColor"/>
+                            <rect y="12" width="8" height="8" fill="currentColor"/>
+                            <rect x="12" y="12" width="8" height="8" fill="currentColor"/>
+                        </svg>
+                        <span class="btn__text">Каталог</span>
+                    </button>
+                    
+                    <button class="header__search-btn" id="searchBtn" aria-label="Поиск">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="header__actions">
+                        <a href="auth.html" class="header__action" aria-label="Профиль">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </a>
+                        <a href="cart.html" class="header__action header__action--cart" aria-label="Корзина">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="9" cy="21" r="1"/>
+                                <circle cx="20" cy="21" r="1"/>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                            </svg>
+                            <span class="header__action-badge" id="cartCount">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mega-menu" id="megaMenu">
+            <div class="container">
+                <div class="mega-menu__content">
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Автоматы</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html">AK серия</a></li>
+                            <li><a href="catalog.html">M4/M16 серия</a></li>
+                            <li><a href="catalog.html">G36 серия</a></li>
+                            <li><a href="catalog.html">HK серия</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Пистолеты</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html">Glock</a></li>
+                            <li><a href="catalog.html">Beretta</a></li>
+                            <li><a href="catalog.html">Desert Eagle</a></li>
+                            <li><a href="catalog.html">1911</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Снайперские винтовки</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html">Болтовые винтовки</a></li>
+                            <li><a href="catalog.html">Полуавтоматические</a></li>
+                            <li><a href="catalog.html">Снайперские системы</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Снаряжение</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html">Тактические жилеты</a></li>
+                            <li><a href="catalog.html">Разгрузки</a></li>
+                            <li><a href="catalog.html">Подсумки</a></li>
+                            <li><a href="catalog.html">Защита</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  </header>
-  <main>
-    <!-- Основной контент -->
-  </main>
-  <footer>
-    
-  </footer>
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal__overlay"></div>
+        <div class="search-modal__content">
+            <button class="search-modal__close" id="searchClose">&times;</button>
+            <form class="search-form">
+                <input type="text" class="search-form__input" placeholder="Введите название товара..." autofocus>
+                <button type="submit" class="search-form__btn">Найти</button>
+            </form>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="index.html" class="breadcrumbs__link">Главная</a>
+                <span class="breadcrumbs__separator">/</span>
+                <span class="breadcrumbs__current">Каталог</span>
+            </nav>
+
+            <div class="catalog">
+                <aside class="catalog__sidebar">
+                    <div class="filter">
+                        <h2 class="filter__title">Фильтры</h2>
+                        
+                        <div class="filter__group">
+                            <h3 class="filter__group-title">Цена</h3>
+                            <div class="filter__price">
+                                <div class="filter__price-inputs">
+                                    <input type="number" class="filter__price-input" placeholder="От" value="0" min="0">
+                                    <span>—</span>
+                                    <input type="number" class="filter__price-input" placeholder="До" value="50000" max="100000">
+                                </div>
+                                <input type="range" class="filter__range" min="0" max="100000" value="50000">
+                            </div>
+                        </div>
+
+                        <div class="filter__group">
+                            <button class="filter__group-header" data-filter="brand">
+                                <h3 class="filter__group-title">Бренд</h3>
+                                <svg class="filter__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor">
+                                    <path d="M4 6l4 4 4-4"/>
+                                </svg>
+                            </button>
+                            <div class="filter__group-content filter__group-content--active" data-filter-content="brand">
+                                <label class="filter__checkbox">
+                                    <input type="checkbox" name="brand" value="cyma">
+                                    <span>Cyma</span>
+                                </label>
+                                <label class="filter__checkbox">
+                                    <input type="checkbox" name="brand" value="tokyo-marui">
+                                    <span>Tokyo Marui</span>
+                                </label>
+                                <label class="filter__checkbox">
+                                    <input type="checkbox" name="brand" value="gg">
+                                    <span>G&G Armament</span>
+                                </label>
+                                <label class="filter__checkbox">
+                                    <input type="checkbox" name="brand" value="vfc">
+                                    <span>VFC</span>
+                                </label>
+                                <label class="filter__checkbox">
+                                    <input type="checkbox" name="brand" value="we">
+                                    <span>WE</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter__group">
+                            <button class="filter__group-header" data-filter="type">
+                                <h3 class="filter__group-title">Тип привода</h3>
+                                <svg class="filter__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor">
+                                    <path d="M4 6l4 4 4-4"/>
+                                </svg>
+                            </button>
+                            <div class="filter__group-content" data-filter-content="type">
+                                <label class="filter__checkbox">
+                                    <input type="checkbox" name="type" value="aeg">
+                                    <span>AEG (электро)</span>
+                                </label>
+                                <label class="filter__checkbox">
+                                    <input type="checkbox" name="type" value="gbb">
+                                    <span>GBB (газ)</span>
+                                </label>
+                                <label class="filter__checkbox">
+                                    <input type="checkbox" name="type" value="spring">
+                                    <span>Spring (пружина)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter__group">
+                            <button class="filter__group-header" data-filter="caliber">
+                                <h3 class="filter__group-title">Калибр</h3>
+                                <svg class="filter__arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor">
+                                    <path d="M4 6l4 4 4-4"/>
+                                </svg>
+                            </button>
+                            <div class="filter__group-content" data-filter-content="caliber">
+                                <label class="filter__checkbox">
+                                    <input type="checkbox" name="caliber" value="6mm">
+                                    <span>6 мм</span>
+                                </label>
+                                <label class="filter__checkbox">
+                                    <input type="checkbox" name="caliber" value="8mm">
+                                    <span>8 мм</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="filter__actions">
+                            <button class="btn btn--primary btn--full" id="applyFilters">Применить</button>
+                            <button class="btn btn--secondary btn--full" id="resetFilters">Сбросить</button>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="catalog__main">
+                    <div class="catalog__header">
+                        <h1 class="catalog__title">Страйкбольное оружие <span class="catalog__count">(48 товаров)</span></h1>
+                        <div class="catalog__sort">
+                            <label for="sortSelect">Сортировка:</label>
+                            <select id="sortSelect" class="catalog__sort-select">
+                                <option value="popular">По популярности</option>
+                                <option value="price-asc">Сначала дешевле</option>
+                                <option value="price-desc">Сначала дороже</option>
+                                <option value="new">Новинки</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-grid products-grid--catalog" id="catalogProducts">
+                        <div class="product-card">
+                            <a href="product.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <div class="product-card__placeholder">AK-74M</div>
+                                    <div class="product-card__badge">Хит</div>
+                                </div>
+                                <h3 class="product-card__title">Cyma AK-74M CM.048M</h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__current">15 990 ₽</span>
+                                </div>
+                            </a>
+                            <button class="btn btn--primary btn--full" data-product-id="1">В корзину</button>
+                        </div>
+                        <div class="product-card">
+                            <a href="product.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <div class="product-card__placeholder">M4A1</div>
+                                    <div class="product-card__badge">Хит</div>
+                                </div>
+                                <h3 class="product-card__title">G&G CM16 Raider 2.0</h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__current">18 490 ₽</span>
+                                </div>
+                            </a>
+                            <button class="btn btn--primary btn--full" data-product-id="2">В корзину</button>
+                        </div>
+                        <div class="product-card">
+                            <a href="product.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <div class="product-card__placeholder">GLOCK 17</div>
+                                    <div class="product-card__badge">Хит</div>
+                                </div>
+                                <h3 class="product-card__title">WE Glock 17 Gen4</h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__current">8 990 ₽</span>
+                                </div>
+                            </a>
+                            <button class="btn btn--primary btn--full" data-product-id="3">В корзину</button>
+                        </div>
+                        <div class="product-card">
+                            <a href="product.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <div class="product-card__placeholder">VSR-10</div>
+                                    <div class="product-card__badge">Хит</div>
+                                </div>
+                                <h3 class="product-card__title">Tokyo Marui VSR-10 G-Spec</h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__current">21 990 ₽</span>
+                                </div>
+                            </a>
+                            <button class="btn btn--primary btn--full" data-product-id="4">В корзину</button>
+                        </div>
+                        <div class="product-card">
+                            <a href="product.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <div class="product-card__placeholder">HK416</div>
+                                    <div class="product-card__badge product-card__badge--new">Новинка</div>
+                                </div>
+                                <h3 class="product-card__title">VFC HK416 A5 GBBR</h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__current">42 990 ₽</span>
+                                </div>
+                            </a>
+                            <button class="btn btn--primary btn--full" data-product-id="5">В корзину</button>
+                        </div>
+                        <div class="product-card">
+                            <a href="product.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <div class="product-card__placeholder">MP7</div>
+                                    <div class="product-card__badge product-card__badge--new">Новинка</div>
+                                </div>
+                                <h3 class="product-card__title">Tokyo Marui MP7A1 GBB</h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__current">28 990 ₽</span>
+                                </div>
+                            </a>
+                            <button class="btn btn--primary btn--full" data-product-id="6">В корзину</button>
+                        </div>
+                        <div class="product-card">
+                            <a href="product.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <div class="product-card__placeholder">AKS-74U</div>
+                                    <div class="product-card__badge product-card__badge--sale">-20%</div>
+                                </div>
+                                <h3 class="product-card__title">Cyma AKS-74U CM.045</h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__old">13 990 ₽</span>
+                                    <span class="product-card__current">11 190 ₽</span>
+                                </div>
+                            </a>
+                            <button class="btn btn--primary btn--full" data-product-id="7">В корзину</button>
+                        </div>
+                        <div class="product-card">
+                            <a href="product.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <div class="product-card__placeholder">M14</div>
+                                    <div class="product-card__badge product-card__badge--sale">-15%</div>
+                                </div>
+                                <h3 class="product-card__title">Cyma M14 EBR CM.032</h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__old">19 990 ₽</span>
+                                    <span class="product-card__current">16 990 ₽</span>
+                                </div>
+                            </a>
+                            <button class="btn btn--primary btn--full" data-product-id="8">В корзину</button>
+                        </div>
+                        <div class="product-card">
+                            <a href="product.html" class="product-card__link">
+                                <div class="product-card__image">
+                                    <div class="product-card__placeholder">1911</div>
+                                    <div class="product-card__badge product-card__badge--sale">-25%</div>
+                                </div>
+                                <h3 class="product-card__title">WE Colt 1911 MEU</h3>
+                                <div class="product-card__price">
+                                    <span class="product-card__old">7 990 ₽</span>
+                                    <span class="product-card__current">5 990 ₽</span>
+                                </div>
+                            </a>
+                            <button class="btn btn--primary btn--full" data-product-id="9">В корзину</button>
+                        </div>
+                    </div>
+
+                    <nav class="pagination">
+                        <a href="#" class="pagination__link pagination__link--disabled">&laquo;</a>
+                        <a href="#" class="pagination__link pagination__link--active">1</a>
+                        <a href="#" class="pagination__link">2</a>
+                        <a href="#" class="pagination__link">3</a>
+                        <span class="pagination__dots">...</span>
+                        <a href="#" class="pagination__link">10</a>
+                        <a href="#" class="pagination__link">&raquo;</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__column">
+                    <div class="logo logo--footer">
+                        <span class="logo__text">EXAMPLE</span>
+                    </div>
+                    <p class="footer__text">Профессиональный магазин страйкбольного оружия и снаряжения</p>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social" aria-label="VK">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.09 14.44h-1.98c-.54 0-.71-.44-1.68-1.41-.85-.82-1.22-.93-1.43-.93-.29 0-.38.09-.38.5v1.29c0 .35-.11.56-1.03.56-1.51 0-3.18-.91-4.35-2.62-1.77-2.43-2.25-4.26-2.25-4.63 0-.21.09-.41.5-.41h1.98c.37 0 .51.18.66.59.74 2.17 2 4.08 2.51 4.08.19 0 .28-.09.28-.58V9.85c-.06-.99-.58-1.08-.58-1.43 0-.17.14-.34.37-.34h3.11c.31 0 .42.17.42.54v2.98c0 .31.14.42.23.42.19 0 .35-.11.71-.47 1.08-1.23 1.85-3.12 1.85-3.12.1-.21.28-.41.65-.41h1.98c.41 0 .5.21.41.54-.16.79-1.84 3.28-1.84 3.28-.16.26-.22.37 0 .66.16.22.69.68 1.04 1.09.65.75 1.15 1.38 1.28 1.81.14.43-.07.65-.49.65z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social" aria-label="Telegram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-.99.53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.37-.48 1.02-.73 3.98-1.74 6.64-2.88 7.98-3.43 3.8-1.58 4.59-1.85 5.1-1.86.11 0 .37.03.53.17.14.11.18.26.2.37.01.06.03.24.01.38z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Каталог</h3>
+                    <ul class="footer__list">
+                        <li><a href="catalog.html">Автоматы</a></li>
+                        <li><a href="catalog.html">Пистолеты</a></li>
+                        <li><a href="catalog.html">Снайперские винтовки</a></li>
+                        <li><a href="catalog.html">Снаряжение</a></li>
+                        <li><a href="catalog.html">Аксессуары</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Покупателям</h3>
+                    <ul class="footer__list">
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                        <li><a href="#">Возврат товара</a></li>
+                        <li><a href="#">Вопросы и ответы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__list footer__list--contacts">
+                        <li>г. Москва, ул. Примерная, д. 1</li>
+                        <li><a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
+                        <li><a href="mailto:info@example.ru">info@example.ru</a></li>
+                        <li>Ежедневно с 10:00 до 21:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 EXAMPLE. Все права защищены</p>
+                <div class="footer__payments">
+                    <span>Принимаем к оплате:</span>
+                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+                        <rect width="40" height="24" rx="4" fill="#1434CB"/>
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="8" font-weight="bold">VISA</text>
+                    </svg>
+                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+                        <rect width="40" height="24" rx="4" fill="#EB001B"/>
+                        <circle cx="15" cy="12" r="8" fill="#FF5F00" opacity="0.8"/>
+                        <circle cx="25" cy="12" r="8" fill="#F79E1B" opacity="0.8"/>
+                    </svg>
+                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+                        <rect width="40" height="24" rx="4" fill="#0099DF"/>
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="7" font-weight="bold">МИР</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/cart.js"></script>
 </body>
-<script src="js/script.js"></script>
 </html>

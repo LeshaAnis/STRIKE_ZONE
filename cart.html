@@ -1,22 +1,283 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STRIKEZONE — Страйкбольный магазин</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/normalize.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Корзина">
+    <title>STRIKEZONE — Страйкбольный магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
-  <header>
+    <header class="header" id="header">
+        <div class="header__top-bar">
+            <div class="container">
+                <div class="top-bar">
+                    <div class="top-bar__contacts">
+                        <a href="tel:+74951234567" class="top-bar__link">+7 (495) 123-45-67</a>
+                    </div>
+                    <nav class="top-bar__nav">
+                        <a href="#" class="top-bar__link">Доставка</a>
+                        <a href="#" class="top-bar__link">Оплата</a>
+                        <a href="#" class="top-bar__link">Гарантия</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header__main">
+            <div class="container">
+                <div class="header__content">
+                    <button class="header__burger" id="burgerBtn" aria-label="Меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    
+                    <a href="index.html" class="logo">
+                        <span class="logo__text">EXAMPLE</span>
+                    </a>
+                    
+                    <button class="btn btn--catalog" id="catalogBtn">
+                        <svg class="btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <rect width="8" height="8" fill="currentColor"/>
+                            <rect x="12" width="8" height="8" fill="currentColor"/>
+                            <rect y="12" width="8" height="8" fill="currentColor"/>
+                            <rect x="12" y="12" width="8" height="8" fill="currentColor"/>
+                        </svg>
+                        <span class="btn__text">Каталог</span>
+                    </button>
+                    
+                    <button class="header__search-btn" id="searchBtn" aria-label="Поиск">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                    </button>
+                    
+                    <div class="header__actions">
+                        <a href="auth.html" class="header__action" aria-label="Профиль">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </a>
+                        <a href="cart.html" class="header__action header__action--cart" aria-label="Корзина">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="9" cy="21" r="1"/>
+                                <circle cx="20" cy="21" r="1"/>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                            </svg>
+                            <span class="header__action-badge" id="cartCount">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mega-menu" id="megaMenu">
+            <div class="container">
+                <div class="mega-menu__content">
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Автоматы</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html">AK серия</a></li>
+                            <li><a href="catalog.html">M4/M16 серия</a></li>
+                            <li><a href="catalog.html">G36 серия</a></li>
+                            <li><a href="catalog.html">HK серия</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Пистолеты</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html">Glock</a></li>
+                            <li><a href="catalog.html">Beretta</a></li>
+                            <li><a href="catalog.html">Desert Eagle</a></li>
+                            <li><a href="catalog.html">1911</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Снайперские винтовки</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html">Болтовые винтовки</a></li>
+                            <li><a href="catalog.html">Полуавтоматические</a></li>
+                            <li><a href="catalog.html">Снайперские системы</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Снаряжение</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html">Тактические жилеты</a></li>
+                            <li><a href="catalog.html">Разгрузки</a></li>
+                            <li><a href="catalog.html">Подсумки</a></li>
+                            <li><a href="catalog.html">Защита</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  </header>
-  <main>
-    <!-- Основной контент -->
-  </main>
-  <footer>
-    
-  </footer>
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal__overlay"></div>
+        <div class="search-modal__content">
+            <button class="search-modal__close" id="searchClose">&times;</button>
+            <form class="search-form">
+                <input type="text" class="search-form__input" placeholder="Введите название товара..." autofocus>
+                <button type="submit" class="search-form__btn">Найти</button>
+            </form>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="index.html" class="breadcrumbs__link">Главная</a>
+                <span class="breadcrumbs__separator">/</span>
+                <span class="breadcrumbs__current">Корзина</span>
+            </nav>
+
+            <h1 class="page-title">Корзина</h1>
+
+            <div class="cart" id="cartContainer">
+                <div class="cart-empty" id="cartEmpty">
+                    <svg class="cart-empty__icon" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="9" cy="21" r="1"/>
+                        <circle cx="20" cy="21" r="1"/>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                    </svg>
+                    <h2 class="cart-empty__title">Ваша корзина пуста</h2>
+                    <p class="cart-empty__text">Добавьте товары из каталога, чтобы оформить заказ</p>
+                    <a href="catalog.html" class="btn btn--primary btn--large">Перейти в каталог</a>
+                </div>
+
+                <div class="cart-content" id="cartContent" style="display: none;">
+                    <div class="cart__products">
+                        <table class="cart-table">
+                            <thead>
+                                <tr>
+                                    <th>Товар</th>
+                                    <th>Цена</th>
+                                    <th>Количество</th>
+                                    <th>Сумма</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="cartItems">
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="cart__summary">
+                        <div class="cart-summary">
+                            <h3 class="cart-summary__title">Оформление заказа</h3>
+                            
+                            <div class="cart-summary__promo">
+                                <input type="text" class="cart-summary__promo-input" placeholder="Промокод" id="promoInput">
+                                <button class="btn btn--secondary" id="applyPromo">Применить</button>
+                            </div>
+
+                            <div class="cart-summary__row">
+                                <span>Товары:</span>
+                                <span id="subtotal">0 ₽</span>
+                            </div>
+                            <div class="cart-summary__row">
+                                <span>Скидка:</span>
+                                <span id="discount">0 ₽</span>
+                            </div>
+                            <div class="cart-summary__row cart-summary__row--total">
+                                <span>Итого:</span>
+                                <span id="total">0 ₽</span>
+                            </div>
+
+                            <button class="btn btn--primary btn--large btn--full">Перейти к оформлению</button>
+                            <a href="catalog.html" class="btn btn--secondary btn--full">Продолжить покупки</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__column">
+                    <div class="logo logo--footer">
+                        <span class="logo__text">EXAMPLE</span>
+                    </div>
+                    <p class="footer__text">Профессиональный магазин страйкбольного оружия и снаряжения</p>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social" aria-label="VK">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2zm3.09 14.44h-1.98c-.54 0-.71-.44-1.68-1.41-.85-.82-1.22-.93-1.43-.93-.29 0-.38.09-.38.5v1.29c0 .35-.11.56-1.03.56-1.51 0-3.18-.91-4.35-2.62-1.77-2.43-2.25-4.26-2.25-4.63 0-.21.09-.41.5-.41h1.98c.37 0 .51.18.66.59.74 2.17 2 4.08 2.51 4.08.19 0 .28-.09.28-.58V9.85c-.06-.99-.58-1.08-.58-1.43 0-.17.14-.34.37-.34h3.11c.31 0 .42.17.42.54v2.98c0 .31.14.42.23.42.19 0 .35-.11.71-.47 1.08-1.23 1.85-3.12 1.85-3.12.1-.21.28-.41.65-.41h1.98c.41 0 .5.21.41.54-.16.79-1.84 3.28-1.84 3.28-.16.26-.22.37 0 .66.16.22.69.68 1.04 1.09.65.75 1.15 1.38 1.28 1.81.14.43-.07.65-.49.65z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social" aria-label="Telegram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-.99.53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.37-.48 1.02-.73 3.98-1.74 6.64-2.88 7.98-3.43 3.8-1.58 4.59-1.85 5.1-1.86.11 0 .37.03.53.17.14.11.18.26.2.37.01.06.03.24.01.38z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Каталог</h3>
+                    <ul class="footer__list">
+                        <li><a href="catalog.html">Автоматы</a></li>
+                        <li><a href="catalog.html">Пистолеты</a></li>
+                        <li><a href="catalog.html">Снайперские винтовки</a></li>
+                        <li><a href="catalog.html">Снаряжение</a></li>
+                        <li><a href="catalog.html">Аксессуары</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Покупателям</h3>
+                    <ul class="footer__list">
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                        <li><a href="#">Возврат товара</a></li>
+                        <li><a href="#">Вопросы и ответы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__list footer__list--contacts">
+                        <li>г. Москва, ул. Примерная, д. 1</li>
+                        <li><a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
+                        <li><a href="mailto:info@example.ru">info@example.ru</a></li>
+                        <li>Ежедневно с 10:00 до 21:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">&copy; 2025 EXAMPLE. Все права защищены</p>
+                <div class="footer__payments">
+                    <span>Принимаем к оплате:</span>
+                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+                        <rect width="40" height="24" rx="4" fill="#1434CB"/>
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="8" font-weight="bold">VISA</text>
+                    </svg>
+                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+                        <rect width="40" height="24" rx="4" fill="#EB001B"/>
+                        <circle cx="15" cy="12" r="8" fill="#FF5F00" opacity="0.8"/>
+                        <circle cx="25" cy="12" r="8" fill="#F79E1B" opacity="0.8"/>
+                    </svg>
+                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+                        <rect width="40" height="24" rx="4" fill="#0099DF"/>
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="7" font-weight="bold">МИР</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/cart.js"></script>
 </body>
-<script src="js/script.js"></script>
 </html>

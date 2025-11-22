@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STRIKEZONE — Страйкбольный магазин</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/normalize.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cyma AK-74M CM.048M - страйкбольный автомат.">
+    <title>STRIKEZONE — Страйкбольный магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
-<header class="header" id="header">
+    <header class="header" id="header">
         <div class="header__top-bar">
             <div class="container">
                 <div class="top-bar">
@@ -129,339 +130,199 @@
     </div>
 
     <main class="main">
-        <section class="hero">
-            <div class="slider" id="heroSlider">
-                <div class="slider__track">
-                    <div class="slider__slide slider__slide--active">
-                        <div class="slide">
-                            <div class="container">
-                                <div class="slide__content">
-                                    <h1 class="slide__title">Профессиональное страйкбольное оружие</h1>
-                                    <p class="slide__subtitle">Широкий выбор автоматов, пистолетов и снаряжения от ведущих производителей</p>
-                                    <a href="catalog.html" class="btn btn--primary btn--large">Перейти в каталог</a>
-                                </div>
+        <div class="container">
+            <nav class="breadcrumbs">
+                <a href="index.html" class="breadcrumbs__link">Главная</a>
+                <span class="breadcrumbs__separator">/</span>
+                <a href="catalog.html" class="breadcrumbs__link">Каталог</a>
+                <span class="breadcrumbs__separator">/</span>
+                <a href="catalog.html" class="breadcrumbs__link">Автоматы</a>
+                <span class="breadcrumbs__separator">/</span>
+                <span class="breadcrumbs__current">Cyma AK-74M CM.048M</span>
+            </nav>
+
+            <div class="product">
+                <div class="product__gallery">
+                    <div class="product__main-image">
+                        <div class="product__image-placeholder">AK-74M</div>
+                    </div>
+                    <div class="product__thumbnails">
+                        <button class="product__thumbnail product__thumbnail--active">
+                            <div class="product__thumb-placeholder">1</div>
+                        </button>
+                        <button class="product__thumbnail">
+                            <div class="product__thumb-placeholder">2</div>
+                        </button>
+                        <button class="product__thumbnail">
+                            <div class="product__thumb-placeholder">3</div>
+                        </button>
+                        <button class="product__thumbnail">
+                            <div class="product__thumb-placeholder">4</div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product__info">
+                    <h1 class="product__title">Cyma AK-74M CM.048M</h1>
+                    <div class="product__meta">
+                        <span class="product__sku">Артикул: CM048M</span>
+                        <span class="product__availability product__availability--in-stock">В наличии</span>
+                    </div>
+
+                    <div class="product__price-block">
+                        <div class="product__price">15 990 ₽</div>
+                    </div>
+
+                    <div class="product__options">
+                        <div class="product__option">
+                            <label class="product__option-label">Калибр:</label>
+                            <div class="product__option-buttons">
+                                <button class="product__option-btn product__option-btn--active">6 мм</button>
+                                <button class="product__option-btn">8 мм</button>
+                            </div>
+                        </div>
+
+                        <div class="product__option">
+                            <label class="product__option-label">Тип привода:</label>
+                            <div class="product__option-buttons">
+                                <button class="product__option-btn product__option-btn--active">AEG</button>
+                                <button class="product__option-btn" disabled>GBB (нет в наличии)</button>
                             </div>
                         </div>
                     </div>
-                    <div class="slider__slide">
-                        <div class="slide">
-                            <div class="container">
-                                <div class="slide__content">
-                                    <h2 class="slide__title">Новинки 2025 года</h2>
-                                    <p class="slide__subtitle">Самые современные модели с улучшенными характеристиками</p>
-                                    <a href="catalog.html" class="btn btn--primary btn--large">Смотреть новинки</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider__slide">
-                        <div class="slide">
-                            <div class="container">
-                                <div class="slide__content">
-                                    <h2 class="slide__title">Специальные предложения</h2>
-                                    <p class="slide__subtitle">Скидки до 30% на избранные модели</p>
-                                    <a href="catalog.html" class="btn btn--primary btn--large">К акциям</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="slider__btn slider__btn--prev" id="sliderPrev" aria-label="Предыдущий слайд">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <polyline points="15 18 9 12 15 6"/>
-                    </svg>
-                </button>
-                <button class="slider__btn slider__btn--next" id="sliderNext" aria-label="Следующий слайд">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <polyline points="9 18 15 12 9 6"/>
-                    </svg>
-                </button>
-                <div class="slider__dots" id="sliderDots"></div>
-            </div>
-        </section>
 
-        <section class="trust-block">
-            <div class="container">
-                <div class="trust-block__grid">
-                    <div class="trust-item">
-                        <div class="trust-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <rect x="1" y="3" width="15" height="13"/>
-                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
-                                <circle cx="5.5" cy="18.5" r="2.5"/>
-                                <circle cx="18.5" cy="18.5" r="2.5"/>
-                            </svg>
+                    <div class="product__quantity">
+                        <label class="product__quantity-label">Количество:</label>
+                        <div class="quantity-selector">
+                            <button class="quantity-selector__btn" id="decreaseQty">−</button>
+                            <input type="number" class="quantity-selector__input" id="productQty" value="1" min="1" max="10">
+                            <button class="quantity-selector__btn" id="increaseQty">+</button>
                         </div>
-                        <h3 class="trust-item__title">Быстрая доставка</h3>
-                        <p class="trust-item__text">Доставка по Москве в день заказа</p>
                     </div>
-                    <div class="trust-item">
-                        <div class="trust-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+
+                    <div class="product__actions">
+                        <button class="btn btn--primary btn--large" id="addToCart">Добавить в корзину</button>
+                        <button class="btn btn--secondary btn--icon" aria-label="В избранное">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                             </svg>
-                        </div>
-                        <h3 class="trust-item__title">Гарантия качества</h3>
-                        <p class="trust-item__text">Официальная гарантия на весь товар</p>
-                    </div>
-                    <div class="trust-item">
-                        <div class="trust-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12 6 12 12 16 14"/>
-                            </svg>
-                        </div>
-                        <h3 class="trust-item__title">Поддержка 24/7</h3>
-                        <p class="trust-item__text">Консультации в любое время</p>
-                    </div>
-                    <div class="trust-item">
-                        <div class="trust-item__icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <polyline points="20 6 9 17 4 12"/>
-                            </svg>
-                        </div>
-                        <h3 class="trust-item__title">Проверено опытом</h3>
-                        <p class="trust-item__text">Более 10 лет на рынке</p>
+                        </button>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section class="categories">
-            <div class="container">
-                <h2 class="section-title">Популярные категории</h2>
-                <div class="categories__grid">
-                    <a href="catalog.html" class="category-card">
-                        <div class="category-card__image">
-                            <div class="category-card__placeholder">AK-47</div>
-                        </div>
-                        <h3 class="category-card__title">Автоматы AK</h3>
-                    </a>
-                    <a href="catalog.html" class="category-card">
-                        <div class="category-card__image">
-                            <div class="category-card__placeholder">M4A1</div>
-                        </div>
-                        <h3 class="category-card__title">Автоматы M4/M16</h3>
-                    </a>
-                    <a href="catalog.html" class="category-card">
-                        <div class="category-card__image">
-                            <div class="category-card__placeholder">GLOCK</div>
-                        </div>
-                        <h3 class="category-card__title">Пистолеты</h3>
-                    </a>
-                    <a href="catalog.html" class="category-card">
-                        <div class="category-card__image">
-                            <div class="category-card__placeholder">M40A5</div>
-                        </div>
-                        <h3 class="category-card__title">Снайперские винтовки</h3>
-                    </a>
-                    <a href="catalog.html" class="category-card">
-                        <div class="category-card__image">
-                            <div class="category-card__placeholder">VEST</div>
-                        </div>
-                        <h3 class="category-card__title">Тактическое снаряжение</h3>
-                    </a>
-                    <a href="catalog.html" class="category-card">
-                        <div class="category-card__image">
-                            <div class="category-card__placeholder">MAG</div>
-                        </div>
-                        <h3 class="category-card__title">Аксессуары</h3>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="products-section">
-            <div class="container">
-                <h2 class="section-title">Наши товары</h2>
-                <div class="tabs" id="productTabs">
+            <div class="product-details">
+                <div class="tabs" id="productDetailsTabs">
                     <div class="tabs__header">
-                        <button class="tabs__btn tabs__btn--active" data-tab="hits">Хиты продаж</button>
-                        <button class="tabs__btn" data-tab="new">Новинки</button>
-                        <button class="tabs__btn" data-tab="sale">Акции</button>
+                        <button class="tabs__btn tabs__btn--active" data-tab="description">Описание</button>
+                        <button class="tabs__btn" data-tab="specs">Характеристики</button>
+                        <button class="tabs__btn" data-tab="reviews">Отзывы (5)</button>
                     </div>
                     <div class="tabs__content">
-                        <div class="tabs__pane tabs__pane--active" data-pane="hits">
-                            <div class="products-grid">
-                                <div class="product-card">
-                                    <div class="product-card__image">
-                                        <div class="product-card__placeholder">AK-74M</div>
-                                        <div class="product-card__badge">Хит</div>
-                                    </div>
-                                    <h3 class="product-card__title">Cyma AK-74M CM.048M</h3>
-                                    <div class="product-card__price">
-                                        <span class="product-card__current">15 990 ₽</span>
-                                    </div>
-                                    <button class="btn btn--primary btn--full">В корзину</button>
-                                </div>
-                                <div class="product-card">
-                                    <div class="product-card__image">
-                                        <div class="product-card__placeholder">M4A1</div>
-                                        <div class="product-card__badge">Хит</div>
-                                    </div>
-                                    <h3 class="product-card__title">G&G CM16 Raider 2.0</h3>
-                                    <div class="product-card__price">
-                                        <span class="product-card__current">18 490 ₽</span>
-                                    </div>
-                                    <button class="btn btn--primary btn--full">В корзину</button>
-                                </div>
-                                <div class="product-card">
-                                    <div class="product-card__image">
-                                        <div class="product-card__placeholder">GLOCK 17</div>
-                                        <div class="product-card__badge">Хит</div>
-                                    </div>
-                                    <h3 class="product-card__title">WE Glock 17 Gen4</h3>
-                                    <div class="product-card__price">
-                                        <span class="product-card__current">8 990 ₽</span>
-                                    </div>
-                                    <button class="btn btn--primary btn--full">В корзину</button>
-                                </div>
-                                <div class="product-card">
-                                    <div class="product-card__image">
-                                        <div class="product-card__placeholder">VSR-10</div>
-                                        <div class="product-card__badge">Хит</div>
-                                    </div>
-                                    <h3 class="product-card__title">Tokyo Marui VSR-10 G-Spec</h3>
-                                    <div class="product-card__price">
-                                        <span class="product-card__current">21 990 ₽</span>
-                                    </div>
-                                    <button class="btn btn--primary btn--full">В корзину</button>
-                                </div>
+                        <div class="tabs__pane tabs__pane--active" data-pane="description">
+                            <div class="product-description">
+                                <h3>Описание товара</h3>
+                                <p>Cyma AK-74M CM.048M - полноразмерный страйкбольный автомат, точная копия легендарного российского автомата Калашникова АК-74М. Модель выполнена из высокопрочного металла и пластика, что обеспечивает отличное соотношение прочности и веса.</p>
+                                <p>Автомат оснащен электропневматическим механизмом (AEG), который обеспечивает стабильную скорострельность до 800 выстрелов в минуту. Начальная скорость вылета шарика составляет 120 м/с, что делает его идеальным выбором для страйкбольных игр.</p>
+                                <p>В комплекте поставляется магазин на 600 шаров типа Hi-Cap, аккумулятор и зарядное устройство. Наличие планок Пикатинни позволяет устанавливать различные тактические аксессуары.</p>
+                                <h4>Особенности:</h4>
+                                <ul>
+                                    <li>Металлический корпус и ствол</li>
+                                    <li>Регулируемый приклад</li>
+                                    <li>Планки Пикатинни для аксессуаров</li>
+                                    <li>Реалистичная система разборки</li>
+                                    <li>Качественная сборка от CYMA</li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="tabs__pane" data-pane="new">
-                            <div class="products-grid">
-                                <div class="product-card">
-                                    <div class="product-card__image">
-                                        <div class="product-card__placeholder">HK416</div>
-                                        <div class="product-card__badge product-card__badge--new">Новинка</div>
-                                    </div>
-                                    <h3 class="product-card__title">VFC HK416 A5 GBBR</h3>
-                                    <div class="product-card__price">
-                                        <span class="product-card__current">42 990 ₽</span>
-                                    </div>
-                                    <button class="btn btn--primary btn--full">В корзину</button>
-                                </div>
-                                <div class="product-card">
-                                    <div class="product-card__image">
-                                        <div class="product-card__placeholder">MP7</div>
-                                        <div class="product-card__badge product-card__badge--new">Новинка</div>
-                                    </div>
-                                    <h3 class="product-card__title">Tokyo Marui MP7A1 GBB</h3>
-                                    <div class="product-card__price">
-                                        <span class="product-card__current">28 990 ₽</span>
-                                    </div>
-                                    <button class="btn btn--primary btn--full">В корзину</button>
-                                </div>
-                                <div class="product-card">
-                                    <div class="product-card__image">
-                                        <div class="product-card__placeholder">AAP-01</div>
-                                        <div class="product-card__badge product-card__badge--new">Новинка</div>
-                                    </div>
-                                    <h3 class="product-card__title">Action Army AAP-01 Assassin</h3>
-                                    <div class="product-card__price">
-                                        <span class="product-card__current">12 490 ₽</span>
-                                    </div>
-                                    <button class="btn btn--primary btn--full">В корзину</button>
-                                </div>
-                                <div class="product-card">
-                                    <div class="product-card__image">
-                                        <div class="product-card__placeholder">MCX</div>
-                                        <div class="product-card__badge product-card__badge--new">Новинка</div>
-                                    </div>
-                                    <h3 class="product-card__title">SIG Sauer MCX Virtus AEG</h3>
-                                    <div class="product-card__price">
-                                        <span class="product-card__current">35 990 ₽</span>
-                                    </div>
-                                    <button class="btn btn--primary btn--full">В корзину</button>
-                                </div>
+                        <div class="tabs__pane" data-pane="specs">
+                            <div class="product-specs">
+                                <table class="specs-table">
+                                    <tr>
+                                        <td class="specs-table__label">Производитель</td>
+                                        <td class="specs-table__value">Cyma</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specs-table__label">Модель</td>
+                                        <td class="specs-table__value">CM.048M</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specs-table__label">Тип привода</td>
+                                        <td class="specs-table__value">AEG (электро)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specs-table__label">Калибр</td>
+                                        <td class="specs-table__value">6 мм</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specs-table__label">Начальная скорость</td>
+                                        <td class="specs-table__value">120 м/с</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specs-table__label">Скорострельность</td>
+                                        <td class="specs-table__value">800 выстр/мин</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specs-table__label">Емкость магазина</td>
+                                        <td class="specs-table__value">600 шаров (Hi-Cap)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specs-table__label">Материал корпуса</td>
+                                        <td class="specs-table__value">Металл</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specs-table__label">Длина</td>
+                                        <td class="specs-table__value">940 мм</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specs-table__label">Вес</td>
+                                        <td class="specs-table__value">3.2 кг</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="specs-table__label">Комплектация</td>
+                                        <td class="specs-table__value">Автомат, магазин, аккумулятор, ЗУ</td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
-                        <div class="tabs__pane" data-pane="sale">
-                            <div class="products-grid">
-                                <div class="product-card">
-                                    <div class="product-card__image">
-                                        <div class="product-card__placeholder">AKS-74U</div>
-                                        <div class="product-card__badge product-card__badge--sale">-20%</div>
+                        <div class="tabs__pane" data-pane="reviews">
+                            <div class="product-reviews">
+                                <div class="review">
+                                    <div class="review__header">
+                                        <div class="review__author">Алексей</div>
+                                        <div class="review__rating">★★★★★</div>
+                                        <div class="review__date">15 января 2025</div>
                                     </div>
-                                    <h3 class="product-card__title">Cyma AKS-74U CM.045</h3>
-                                    <div class="product-card__price">
-                                        <span class="product-card__old">13 990 ₽</span>
-                                        <span class="product-card__current">11 190 ₽</span>
+                                    <div class="review__text">
+                                        Отличный автомат за свои деньги! Качество сборки на высоте, металл приятный. Стреляет стабильно, дальность хорошая. Рекомендую новичкам и не только.
                                     </div>
-                                    <button class="btn btn--primary btn--full">В корзину</button>
                                 </div>
-                                <div class="product-card">
-                                    <div class="product-card__image">
-                                        <div class="product-card__placeholder">M14</div>
-                                        <div class="product-card__badge product-card__badge--sale">-15%</div>
+                                <div class="review">
+                                    <div class="review__header">
+                                        <div class="review__author">Михаил</div>
+                                        <div class="review__rating">★★★★☆</div>
+                                        <div class="review__date">10 января 2025</div>
                                     </div>
-                                    <h3 class="product-card__title">Cyma M14 EBR CM.032</h3>
-                                    <div class="product-card__price">
-                                        <span class="product-card__old">19 990 ₽</span>
-                                        <span class="product-card__current">16 990 ₽</span>
+                                    <div class="review__text">
+                                        Хороший АК для начинающих. Из минусов - немного тяжеловат для долгих игр, но это особенность всех металлических АК. В остальном все супер!
                                     </div>
-                                    <button class="btn btn--primary btn--full">В корзину</button>
                                 </div>
-                                <div class="product-card">
-                                    <div class="product-card__image">
-                                        <div class="product-card__placeholder">1911</div>
-                                        <div class="product-card__badge product-card__badge--sale">-25%</div>
+                                <div class="review">
+                                    <div class="review__header">
+                                        <div class="review__author">Дмитрий</div>
+                                        <div class="review__rating">★★★★★</div>
+                                        <div class="review__date">5 января 2025</div>
                                     </div>
-                                    <h3 class="product-card__title">WE Colt 1911 MEU</h3>
-                                    <div class="product-card__price">
-                                        <span class="product-card__old">7 990 ₽</span>
-                                        <span class="product-card__current">5 990 ₽</span>
+                                    <div class="review__text">
+                                        Cyma как всегда молодцы! За эту цену лучшего АК не найти. Отстрелял уже несколько игр - никаких нареканий.
                                     </div>
-                                    <button class="btn btn--primary btn--full">В корзину</button>
-                                </div>
-                                <div class="product-card">
-                                    <div class="product-card__image">
-                                        <div class="product-card__placeholder">G36C</div>
-                                        <div class="product-card__badge product-card__badge--sale">-30%</div>
-                                    </div>
-                                    <h3 class="product-card__title">JG G36C Enhanced</h3>
-                                    <div class="product-card__price">
-                                        <span class="product-card__old">14 990 ₽</span>
-                                        <span class="product-card__current">10 490 ₽</span>
-                                    </div>
-                                    <button class="btn btn--primary btn--full">В корзину</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="about-preview">
-            <div class="container">
-                <div class="about-preview__content">
-                    <div class="about-preview__text">
-                        <h2 class="section-title">О магазине EXAMPLE</h2>
-                        <p>Мы специализируемся на продаже страйкбольного оружия и снаряжения с 2014 года. Наша команда состоит из опытных игроков, которые знают все о страйкболе и готовы помочь с выбором.</p>
-                        <p>В нашем каталоге только проверенные бренды: Tokyo Marui, G&G, Cyma, VFC, WE и другие. Мы гарантируем качество каждого товара и предоставляем официальную гарантию.</p>
-                        <a href="#" class="btn btn--secondary">Подробнее о нас</a>
-                    </div>
-                    <div class="about-preview__image">
-                        <div class="about-preview__placeholder">AIRSOFT SHOP</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="newsletter">
-            <div class="container">
-                <div class="newsletter__content">
-                    <h2 class="newsletter__title">Подпишитесь на рассылку</h2>
-                    <p class="newsletter__text">Получайте информацию о новинках, акциях и специальных предложениях</p>
-                    <form class="newsletter__form">
-                        <input type="email" class="newsletter__input" placeholder="Ваш email" required>
-                        <button type="submit" class="btn btn--primary">Подписаться</button>
-                    </form>
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
 
     <footer class="footer">
@@ -542,11 +403,9 @@
         </div>
     </footer>
 
-    <script src="js/slider.js"></script>
-    <script src="js/tabs.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/tabs.js"></script>
     <script src="js/cart.js"></script>
-
+    <script src="js/product.js"></script>
 </body>
-
 </html>
