@@ -1,0 +1,24 @@
+/* Подключение шрифтов */
+@import "font.css";
+
+/* Подключение предзагрузчика страницы */
+@import "preloader.css";
+
+/* Подключение основных стилей */
+@import "body.css";
+
+/* Подключение стилей относящихся к header */
+@import "header.css";
+
+/* Подключение стилей относящихся к footer */
+@import "footer.css";
+
+/* Подключение стилей относящихся к страницам */
+@import "auth.css";
+@import "product.css";
+@import "index.css";
+@import "cart.css";
+@import "catalog.css";
+
+/* Подключение стилей отвечающих за адаптив */
+@import "adaptive.css";
