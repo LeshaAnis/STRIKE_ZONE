@@ -1,22 +1,399 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STRIKEZONE — Страйкбольный магазин</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/normalize.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог страйкбольного оружия - автоматы, пистолеты, снайперские винтовки и аксессуары.">
+    <title>Каталог - STRIKE ZONE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
-  <header>
+    <header class="header" id="header">
+        <div class="header__top-bar">
+            <div class="container top-bar">
+                <div class="top-bar__contacts">
+                    <a href="tel:+79991234567" class="top-bar__link">+7 (999) 123-45-67</a>
+                    <span class="top-bar__link">Пн-Вс: 10:00-21:00</span>
+                </div>
+                <nav class="top-bar__nav">
+                    <a href="catalog.html" class="top-bar__link">Каталог</a>
+                    <a href="about.html" class="top-bar__link">О нас</a>
+                </nav>
+            </div>
+        </div>
+        <div class="header__main">
+            <div class="container header__content">
+                <button class="header__burger" id="burgerBtn" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="index.html" class="logo">
+                    <img src="images/logo/logo.png" alt="STRIKE ZONE" class="logo__img">
+                    <span class="logo__text">STRIKE ZONE</span>
+                </a>
+                <button class="btn btn--catalog" id="catalogBtn">
+                    <img src="images/icons/menu.png" alt="" class="btn__icon">
+                    Каталог
+                </button>
+                <button class="header__search-btn" id="searchBtn" aria-label="Поиск">
+                    <img src="images/icons/search.png" alt="Поиск">
+                </button>
+                <div class="header__actions">
+                    <a href="auth.html" class="header__action" aria-label="Личный кабинет">
+                        <img src="images/icons/user.png" alt="Аккаунт">
+                    </a>
+                    <a href="cart.html" class="header__action header__action--cart" aria-label="Корзина">
+                        <img src="images/icons/cart.png" alt="Корзина">
+                        <span class="header__action-badge" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="mega-menu" id="megaMenu">
+                <div class="container mega-menu__content">
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Автоматы</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html?category=ak">АК-серия</a></li>
+                            <li><a href="catalog.html?category=m4">M4/M16</a></li>
+                            <li><a href="catalog.html?category=g36">G36</a></li>
+                            <li><a href="catalog.html?category=mp5">MP5</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Пистолеты</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html?category=glock">Glock</a></li>
+                            <li><a href="catalog.html?category=1911">1911</a></li>
+                            <li><a href="catalog.html?category=beretta">Beretta</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Снайперские винтовки</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html?category=l96">L96</a></li>
+                            <li><a href="catalog.html?category=vsr10">VSR-10</a></li>
+                            <li><a href="catalog.html?category=svd">СВД</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Аксессуары</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html?category=optics">Оптика</a></li>
+                            <li><a href="catalog.html?category=magazines">Магазины</a></li>
+                            <li><a href="catalog.html?category=batteries">Аккумуляторы</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-  </header>
-  <main>
-    <!-- Основной контент -->
-  </main>
-  <footer>
-    
-  </footer>
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal__overlay"></div>
+        <div class="search-modal__content">
+            <button class="search-modal__close" id="searchClose">
+                <img src="images/icons/close.png" alt="Закрыть" class="search-modal__close-icon">
+            </button>
+            <form class="search-form" action="catalog.html">
+                <input type="search" class="search-form__input" name="q" placeholder="Найти товар...">
+                <button type="submit" class="search-form__btn">Найти</button>
+            </form>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                <a href="index.html" class="breadcrumbs__link">Главная</a>
+                <span class="breadcrumbs__separator">/</span>
+                <span class="breadcrumbs__current">Каталог</span>
+            </nav>
+
+            <div class="catalog">
+                <aside class="catalog__sidebar">
+                    <div class="filter">
+                        <h2 class="filter__title">Фильтры</h2>
+                        
+                        <div class="filter__group">
+                            <button class="filter__group-header" aria-expanded="true">
+                                <span class="filter__group-title">Цена</span>
+                                <span class="filter__arrow">
+                                    <img src="images/icons/arrow-down.png" alt="" class="filter__arrow-icon">
+                                </span>
+                            </button>
+                            <div class="filter__group-content filter__group-content--active">
+                                <div class="filter__price">
+                                    <div class="filter__price-inputs">
+                                        <input type="number" class="filter__price-input" placeholder="От" min="0">
+                                        <span>—</span>
+                                        <input type="number" class="filter__price-input" placeholder="До" min="0">
+                                    </div>
+                                    <input type="range" class="filter__range" min="0" max="100000" value="50000">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="filter__group">
+                            <button class="filter__group-header" aria-expanded="true">
+                                <span class="filter__group-title">Тип</span>
+                                <span class="filter__arrow">
+                                    <img src="images/icons/arrow-down.png" alt="" class="filter__arrow-icon">
+                                </span>
+                            </button>
+                            <div class="filter__group-content filter__group-content--active">
+                                <label class="filter__checkbox">
+                                    <input type="checkbox" checked>
+                                    <span>Автоматы</span>
+                                </label>
+                                <label class="filter__checkbox">
+                                    <input type="checkbox" checked>
+                                    <span>Пистолеты</span>
+                                </label>
+                                <label class="filter__checkbox">
+                                    <input type="checkbox" checked>
+                                    <span>Снайперские</span>
+                                </label>
+                                <label class="filter__checkbox">
+                                    <input type="checkbox" checked>
+                                    <span>Пистолеты-пулемёты</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter__group">
+                            <button class="filter__group-header" aria-expanded="true">
+                                <span class="filter__group-title">Бренд</span>
+                                <span class="filter__arrow">
+                                    <img src="images/icons/arrow-down.png" alt="" class="filter__arrow-icon">
+                                </span>
+                            </button>
+                            <div class="filter__group-content filter__group-content--active">
+                                <label class="filter__checkbox">
+                                    <input type="checkbox">
+                                    <span>Tokyo Marui</span>
+                                </label>
+                                <label class="filter__checkbox">
+                                    <input type="checkbox">
+                                    <span>G&G Armament</span>
+                                </label>
+                                <label class="filter__checkbox">
+                                    <input type="checkbox">
+                                    <span>VFC</span>
+                                </label>
+                                <label class="filter__checkbox">
+                                    <input type="checkbox">
+                                    <span>LCT</span>
+                                </label>
+                                <label class="filter__checkbox">
+                                    <input type="checkbox">
+                                    <span>Cyma</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="filter__actions">
+                            <button class="btn btn--primary btn--full">Применить</button>
+                            <button class="btn btn--secondary btn--full">Сбросить</button>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="catalog__main">
+                    <div class="catalog__header">
+                        <h1 class="catalog__title">Каталог <span class="catalog__count">(12 товаров)</span></h1>
+                        <div class="catalog__sort">
+                            <label for="sortSelect">Сортировка:</label>
+                            <select id="sortSelect" class="catalog__sort-select">
+                                <option value="popular">По популярности</option>
+                                <option value="price-asc">Сначала дешевле</option>
+                                <option value="price-desc">Сначала дороже</option>
+                                <option value="new">Новинки</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="products-grid products-grid--catalog">
+                        <article class="product-card">
+                            <a href="product.html?id=1" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="images/products/ak-74m.png" alt="AK-74M">
+                                    <span class="product-card__badge">ХИТ</span>
+                                </div>
+                                <h3 class="product-card__title">Страйкбольный автомат AK-74M</h3>
+                            </a>
+                            <div class="product-card__price">
+                                <span class="product-card__current">28 900 ₽</span>
+                            </div>
+                            <button class="btn btn--primary btn--full" data-product-id="1">В корзину</button>
+                        </article>
+                        <article class="product-card">
+                            <a href="product.html?id=2" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="images/products/m4a1.png" alt="M4A1 RIS">
+                                    <span class="product-card__badge">ХИТ</span>
+                                </div>
+                                <h3 class="product-card__title">Страйкбольный автомат M4A1 RIS</h3>
+                            </a>
+                            <div class="product-card__price">
+                                <span class="product-card__current">32 500 ₽</span>
+                            </div>
+                            <button class="btn btn--primary btn--full" data-product-id="2">В корзину</button>
+                        </article>
+                        <article class="product-card">
+                            <a href="product.html?id=3" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="images/products/glock-17.png" alt="Glock 17">
+                                </div>
+                                <h3 class="product-card__title">Пистолет Glock 17 Gen.4</h3>
+                            </a>
+                            <div class="product-card__price">
+                                <span class="product-card__current">12 900 ₽</span>
+                            </div>
+                            <button class="btn btn--primary btn--full" data-product-id="3">В корзину</button>
+                        </article>
+                        <article class="product-card">
+                            <a href="product.html?id=4" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="images/products/mp5a5.png" alt="MP5A5">
+                                </div>
+                                <h3 class="product-card__title">Пистолет-пулемёт MP5A5</h3>
+                            </a>
+                            <div class="product-card__price">
+                                <span class="product-card__current">24 500 ₽</span>
+                            </div>
+                            <button class="btn btn--primary btn--full" data-product-id="4">В корзину</button>
+                        </article>
+                        <article class="product-card">
+                            <a href="product.html?id=5" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="images/products/ak-12.png" alt="AK-12">
+                                    <span class="product-card__badge product-card__badge--new">NEW</span>
+                                </div>
+                                <h3 class="product-card__title">Страйкбольный автомат AK-12</h3>
+                            </a>
+                            <div class="product-card__price">
+                                <span class="product-card__current">45 900 ₽</span>
+                            </div>
+                            <button class="btn btn--primary btn--full" data-product-id="5">В корзину</button>
+                        </article>
+                        <article class="product-card">
+                            <a href="product.html?id=6" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="images/products/mcx.png" alt="SIG MCX">
+                                    <span class="product-card__badge product-card__badge--new">NEW</span>
+                                </div>
+                                <h3 class="product-card__title">SIG MCX Virtus</h3>
+                            </a>
+                            <div class="product-card__price">
+                                <span class="product-card__current">52 000 ₽</span>
+                            </div>
+                            <button class="btn btn--primary btn--full" data-product-id="6">В корзину</button>
+                        </article>
+                        <article class="product-card">
+                            <a href="product.html?id=9" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="images/products/g36c.png" alt="G36C">
+                                    <span class="product-card__badge product-card__badge--sale">-20%</span>
+                                </div>
+                                <h3 class="product-card__title">Страйкбольный автомат G36C</h3>
+                            </a>
+                            <div class="product-card__price">
+                                <span class="product-card__old">29 900 ₽</span>
+                                <span class="product-card__current">23 900 ₽</span>
+                            </div>
+                            <button class="btn btn--primary btn--full" data-product-id="9">В корзину</button>
+                        </article>
+                        <article class="product-card">
+                            <a href="product.html?id=11" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="images/products/vsr-10.png" alt="VSR-10">
+                                    <span class="product-card__badge product-card__badge--sale">-25%</span>
+                                </div>
+                                <h3 class="product-card__title">Снайперская винтовка VSR-10</h3>
+                            </a>
+                            <div class="product-card__price">
+                                <span class="product-card__old">35 000 ₽</span>
+                                <span class="product-card__current">26 250 ₽</span>
+                            </div>
+                            <button class="btn btn--primary btn--full" data-product-id="11">В корзину</button>
+                        </article>
+                        <article class="product-card">
+                            <a href="product.html?id=12" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="images/products/p90.png" alt="P90">
+                                    <span class="product-card__badge product-card__badge--sale">-30%</span>
+                                </div>
+                                <h3 class="product-card__title">FN P90</h3>
+                            </a>
+                            <div class="product-card__price">
+                                <span class="product-card__old">38 000 ₽</span>
+                                <span class="product-card__current">26 600 ₽</span>
+                            </div>
+                            <button class="btn btn--primary btn--full" data-product-id="12">В корзину</button>
+                        </article>
+                    </div>
+
+                    <nav class="pagination" aria-label="Страницы каталога">
+                        <a href="#" class="pagination__link pagination__link--disabled" aria-label="Предыдущая страница">
+                            <img src="images/icons/arrow-left.png" alt="Назад" class="pagination__icon">
+                        </a>
+                        <a href="#" class="pagination__link pagination__link--active" aria-current="page">1</a>
+                        <a href="#" class="pagination__link">2</a>
+                        <a href="#" class="pagination__link">3</a>
+                        <span class="pagination__dots">...</span>
+                        <a href="#" class="pagination__link">10</a>
+                        <a href="#" class="pagination__link" aria-label="Следующая страница">
+                            <img src="images/icons/arrow-right.png" alt="Вперёд" class="pagination__icon">
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__column">
+                    <a href="index.html" class="logo logo--footer">
+                        <img src="images/logo/logo.png" alt="STRIKE ZONE" class="logo__img">
+                        <span class="logo__text">STRIKE ZONE</span>
+                    </a>
+                    <p class="footer__text">Профессиональное страйкбольное оружие и снаряжение.</p>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Каталог</h3>
+                    <ul class="footer__list">
+                        <li><a href="catalog.html?category=rifles">Автоматы</a></li>
+                        <li><a href="catalog.html?category=pistols">Пистолеты</a></li>
+                        <li><a href="catalog.html?category=snipers">Снайперские</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Информация</h3>
+                    <ul class="footer__list">
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="cart.html">Корзина</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__list footer__list--contacts">
+                        <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+                        <li><a href="mailto:info@strikezone.ru">info@strikezone.ru</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">2024 STRIKE ZONE</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/app.js"></script>
 </body>
-<script src="js/script.js"></script>
 </html>

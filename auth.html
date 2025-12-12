@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Вход и регистрация - STRIKE ZONE магазин страйкбольного оружия">
+    <title>Вход - STRIKE ZONE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header__top-bar">
+            <div class="container top-bar">
+                <div class="top-bar__contacts">
+                    <a href="tel:+79991234567" class="top-bar__link">+7 (999) 123-45-67</a>
+                    <span class="top-bar__link">Пн-Вс: 10:00-21:00</span>
+                </div>
+                <nav class="top-bar__nav">
+                    <a href="catalog.html" class="top-bar__link">Каталог</a>
+                    <a href="about.html" class="top-bar__link">О нас</a>
+                </nav>
+            </div>
+        </div>
+        <div class="header__main">
+            <div class="container header__content">
+                <button class="header__burger" id="burgerBtn" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="index.html" class="logo">
+                    <img src="images/logo/logo.png" alt="STRIKE ZONE" class="logo__img">
+                    <span class="logo__text">STRIKE ZONE</span>
+                </a>
+                <button class="btn btn--catalog" id="catalogBtn">
+                    <img src="images/icons/menu.png" alt="" class="btn__icon">
+                    Каталог
+                </button>
+                <button class="header__search-btn" id="searchBtn" aria-label="Поиск">
+                    <img src="images/icons/search.png" alt="Поиск">
+                </button>
+                <div class="header__actions">
+                    <a href="auth.html" class="header__action" aria-label="Личный кабинет">
+                        <img src="images/icons/user.png" alt="Аккаунт">
+                    </a>
+                    <a href="cart.html" class="header__action header__action--cart" aria-label="Корзина">
+                        <img src="images/icons/cart.png" alt="Корзина">
+                        <span class="header__action-badge" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="mega-menu" id="megaMenu">
+                <div class="container mega-menu__content">
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Автоматы</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html?category=ak">АК-серия</a></li>
+                            <li><a href="catalog.html?category=m4">M4/M16</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Пистолеты</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html?category=glock">Glock</a></li>
+                            <li><a href="catalog.html?category=1911">1911</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Снайперские</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html?category=vsr10">VSR-10</a></li>
+                            <li><a href="catalog.html?category=l96">L96</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Аксессуары</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html?category=optics">Оптика</a></li>
+                            <li><a href="catalog.html?category=magazines">Магазины</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal__overlay"></div>
+        <div class="search-modal__content">
+            <button class="search-modal__close" id="searchClose">
+                <img src="images/icons/close.png" alt="Закрыть" class="search-modal__close-icon">
+            </button>
+            <form class="search-form" action="catalog.html">
+                <input type="search" class="search-form__input" name="q" placeholder="Найти товар...">
+                <button type="submit" class="search-form__btn">Найти</button>
+            </form>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="auth-page">
+            <div class="auth-container">
+                <div class="tabs" id="authTabs">
+                    <div class="tabs__header tabs__header--auth">
+                        <button class="tabs__btn tabs__btn--active" data-tab="login">Вход</button>
+                        <button class="tabs__btn" data-tab="register">Регистрация</button>
+                    </div>
+
+                    <div class="tabs__pane tabs__pane--active" data-pane="login">
+                        <form class="auth-form">
+                            <div class="form-group">
+                                <label class="form-group__label" for="loginEmail">Email</label>
+                                <input type="email" class="form-group__input" id="loginEmail" placeholder="example@mail.ru" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-group__label" for="loginPassword">Пароль</label>
+                                <input type="password" class="form-group__input" id="loginPassword" placeholder="Введите пароль" required>
+                            </div>
+                            <div class="form-group form-group--checkbox">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span>Запомнить меня</span>
+                                </label>
+                                <a href="#" class="auth-link">Забыли пароль?</a>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full btn--large">Войти</button>
+                        </form>
+                    </div>
+
+                    <div class="tabs__pane" data-pane="register">
+                        <form class="auth-form">
+                            <div class="form-group">
+                                <label class="form-group__label" for="registerName">Имя</label>
+                                <input type="text" class="form-group__input" id="registerName" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-group__label" for="registerEmail">Email</label>
+                                <input type="email" class="form-group__input" id="registerEmail" placeholder="example@mail.ru" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-group__label" for="registerPhone">Телефон</label>
+                                <input type="tel" class="form-group__input" id="registerPhone" placeholder="+7 (___) ___-__-__">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-group__label" for="registerPassword">Пароль</label>
+                                <input type="password" class="form-group__input" id="registerPassword" placeholder="Минимум 8 символов" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-group__label" for="registerPasswordConfirm">Подтвердите пароль</label>
+                                <input type="password" class="form-group__input" id="registerPasswordConfirm" placeholder="Повторите пароль" required>
+                            </div>
+                            <div class="form-group form-group--checkbox">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" required>
+                                    <span>Я согласен с <a href="#" class="auth-link">условиями</a></span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full btn--large">Зарегистрироваться</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__column">
+                    <a href="index.html" class="logo logo--footer">
+                        <img src="images/logo/logo.png" alt="STRIKE ZONE" class="logo__img">
+                        <span class="logo__text">STRIKE ZONE</span>
+                    </a>
+                    <p class="footer__text">Профессиональное страйкбольное оружие и снаряжение.</p>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Каталог</h3>
+                    <ul class="footer__list">
+                        <li><a href="catalog.html?category=rifles">Автоматы</a></li>
+                        <li><a href="catalog.html?category=pistols">Пистолеты</a></li>
+                        <li><a href="catalog.html?category=snipers">Снайперские</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Информация</h3>
+                    <ul class="footer__list">
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__list footer__list--contacts">
+                        <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+                        <li><a href="mailto:info@strikezone.ru">info@strikezone.ru</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">2024 STRIKE ZONE</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

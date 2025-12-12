@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Корзина покупок - STRIKE ZONE магазин страйкбольного оружия">
-    <title>Корзина - STRIKE ZONE</title>
+    <meta name="description" content="О компании STRIKE ZONE - ведущий магазин страйкбольного оружия в России">
+    <title>О нас - STRIKE ZONE</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
 </head>
@@ -103,61 +103,75 @@
             <nav class="breadcrumbs" aria-label="Хлебные крошки">
                 <a href="index.html" class="breadcrumbs__link">Главная</a>
                 <span class="breadcrumbs__separator">/</span>
-                <span class="breadcrumbs__current">Корзина</span>
+                <span class="breadcrumbs__current">О нас</span>
             </nav>
 
-            <h1 class="page-title">Корзина</h1>
+            <h1 class="page-title">О компании STRIKE ZONE</h1>
 
-            <div class="cart-empty" id="cartEmpty">
-                <div class="cart-empty__icon">
-                    <img src="images/icons/cart.png" alt="">
+            <section class="about-preview">
+                <div class="about-preview__content">
+                    <div class="about-preview__text">
+                        <h2 class="section-title">Наша история</h2>
+                        <p>STRIKE ZONE — это команда профессионалов и энтузиастов страйкбола, объединённых общей страстью к тактическим играм и качественному снаряжению. Мы начали свой путь в 2015 году как небольшой магазин для друзей-страйкболистов.</p>
+                        <p>Сегодня STRIKE ZONE — один из ведущих магазинов страйкбольного оружия и снаряжения в России. Мы предлагаем широкий ассортимент продукции от мировых производителей: Tokyo Marui, G&G Armament, VFC, LCT, Cyma и многих других.</p>
+                        <p>Наша команда состоит из опытных страйкболистов, которые лично тестируют каждый товар и могут дать профессиональную консультацию по выбору снаряжения для любого стиля игры.</p>
+                    </div>
+                    <div class="about-preview__image">
+                        <img src="images/team.png" alt="Команда STRIKE ZONE">
+                    </div>
                 </div>
-                <h2 class="cart-empty__title">Ваша корзина пуста</h2>
-                <p class="cart-empty__text">Добавьте товары из каталога, чтобы оформить заказ</p>
-                <a href="catalog.html" class="btn btn--primary btn--large">Перейти в каталог</a>
-            </div>
+            </section>
 
-            <div class="cart-content" id="cartContent" style="display: none;">
-                <div class="cart-table-wrapper">
-                    <table class="cart-table">
-                        <thead>
-                            <tr>
-                                <th>Товар</th>
-                                <th>Цена</th>
-                                <th>Количество</th>
-                                <th>Сумма</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody id="cartItems">
-                        </tbody>
-                    </table>
+            <section class="trust-block">
+                <h2 class="section-title">Почему выбирают нас</h2>
+                <div class="trust-block__grid">
+                    <div class="trust-item">
+                        <div class="trust-item__icon">
+                            <img src="images/icons/guarantee.png" alt="">
+                        </div>
+                        <h3 class="trust-item__title">Гарантия качества</h3>
+                        <p class="trust-item__text">Официальная гарантия 12 месяцев на всю продукцию. Работаем только с проверенными поставщиками.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-item__icon">
+                            <img src="images/icons/delivery.png" alt="">
+                        </div>
+                        <h3 class="trust-item__title">Быстрая доставка</h3>
+                        <p class="trust-item__text">Доставка по Москве за 1 день, по России — от 2 до 7 дней. Бесплатная доставка от 15 000 ₽.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-item__icon">
+                            <img src="images/icons/support.png" alt="">
+                        </div>
+                        <h3 class="trust-item__title">Экспертная поддержка</h3>
+                        <p class="trust-item__text">Наши консультанты — опытные страйкболисты. Поможем подобрать снаряжение под ваш стиль игры.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-item__icon">
+                            <img src="images/icons/price.png" alt="">
+                        </div>
+                        <h3 class="trust-item__title">Лучшие цены</h3>
+                        <p class="trust-item__text">Гарантия минимальной цены. Найдёте дешевле — снизим цену. Регулярные акции и скидки.</p>
+                    </div>
                 </div>
+            </section>
 
-                <aside class="cart-summary">
-                    <h2 class="cart-summary__title">Ваш заказ</h2>
-                    
-                    <div class="cart-summary__promo">
-                        <input type="text" class="cart-summary__promo-input" placeholder="Промокод">
-                        <button class="btn btn--secondary">Применить</button>
-                    </div>
-
-                    <div class="cart-summary__row">
-                        <span>Подытог</span>
-                        <span id="subtotal">0 ₽</span>
-                    </div>
-                    <div class="cart-summary__row">
-                        <span>Скидка</span>
-                        <span id="discount">0 ₽</span>
-                    </div>
-                    <div class="cart-summary__row cart-summary__row--total">
-                        <span>Итого</span>
-                        <span id="total">0 ₽</span>
-                    </div>
-
-                    <button class="btn btn--primary btn--full btn--large">Оформить заказ</button>
-                </aside>
-            </div>
+            <section class="products-section">
+                <h2 class="section-title">Наша миссия</h2>
+                <div class="product-description" style="max-width: 800px; margin: 0 auto;">
+                    <p>Мы верим, что страйкбол — это не просто хобби, а стиль жизни. Это возможность почувствовать себя частью команды, развить тактическое мышление и провести время с единомышленниками.</p>
+                    <p>Наша миссия — сделать качественное страйкбольное снаряжение доступным для каждого, кто разделяет нашу страсть к этому виду спорта. Мы стремимся не просто продавать товары, а помогать нашим клиентам получать максимум удовольствия от игры.</p>
+                    <h4>Мы предлагаем:</h4>
+                    <ul>
+                        <li>Более 1000 наименований товаров в наличии</li>
+                        <li>Электропневматические приводы (AEG) ведущих брендов</li>
+                        <li>Газовые и спринговые пистолеты</li>
+                        <li>Снайперские винтовки и дробовики</li>
+                        <li>Тактическое снаряжение и экипировку</li>
+                        <li>Оптику, аксессуары и запасные части</li>
+                    </ul>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -169,33 +183,35 @@
                         <img src="images/logo/logo.png" alt="STRIKE ZONE" class="logo__img">
                         <span class="logo__text">STRIKE ZONE</span>
                     </a>
-                    <p class="footer__text">Профессиональное страйкбольное оружие и снаряжение.</p>
+                    <p class="footer__text">Профессиональное страйкбольное оружие и снаряжение с доставкой по всей России.</p>
                 </div>
                 <div class="footer__column">
                     <h3 class="footer__title">Каталог</h3>
                     <ul class="footer__list">
                         <li><a href="catalog.html?category=rifles">Автоматы</a></li>
                         <li><a href="catalog.html?category=pistols">Пистолеты</a></li>
-                        <li><a href="catalog.html?category=snipers">Снайперские</a></li>
+                        <li><a href="catalog.html?category=snipers">Снайперские винтовки</a></li>
+                        <li><a href="catalog.html?category=accessories">Аксессуары</a></li>
                     </ul>
                 </div>
                 <div class="footer__column">
                     <h3 class="footer__title">Информация</h3>
                     <ul class="footer__list">
-                        <li><a href="about.html">О нас</a></li>
                         <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="cart.html">Корзина</a></li>
                     </ul>
                 </div>
                 <div class="footer__column">
                     <h3 class="footer__title">Контакты</h3>
                     <ul class="footer__list footer__list--contacts">
+                        <li>г. Москва, ул. Примерная, д. 1</li>
                         <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
                         <li><a href="mailto:info@strikezone.ru">info@strikezone.ru</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
-                <p class="footer__copyright">2024 STRIKE ZONE</p>
+                <p class="footer__copyright">2024 STRIKE ZONE. Все права защищены.</p>
             </div>
         </div>
     </footer>
