@@ -255,9 +255,9 @@
 
 .search-modal__close {
     position: absolute;
-    top: var(--spacing-sm);
-    right: var(--spacing-sm);
-    padding: var(--spacing-xs);
+    top: 7px;
+    right: 5px;
+
     transition: opacity var(--transition);
 }
 

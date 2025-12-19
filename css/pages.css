@@ -194,6 +194,7 @@
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
     font-size: var(--font-size-sm);
+    width: 30px;
 }
 
 .filter__range {
@@ -633,4 +634,57 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
+}
+
+/* Подсветка найденного текста */
+.search-highlight {
+    background-color: #ffeb3b;
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+/* Стили для сообщения "ничего не найдено" */
+.no-results {
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 2px dashed #dee2e6;
+}
+
+.no-results h3 {
+    color: #343a40;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.no-results p {
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+/* Анимации для уведомлений */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.filter-notification {
+    animation: slideInRight 0.3s ease;
 }

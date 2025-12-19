@@ -69,7 +69,9 @@
 }
 
 .btn--full {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn--icon {
@@ -181,14 +183,17 @@
     padding: var(--spacing-sm);
     font-size: var(--font-size-base);
     font-weight: 500;
-    min-height: 3em;
+    height: 60px;
     line-height: 1.5;
+    text-align: center;
 }
 
 .product-card__price {
     padding: 0 var(--spacing-sm) var(--spacing-sm);
     display: flex;
     align-items: center;
+    margin-top: 10px;
+    justify-content: center;
     gap: var(--spacing-xs);
     flex-wrap: wrap;
 }
@@ -206,7 +211,8 @@
 }
 
 .product-card .btn {
-    margin: 0 var(--spacing-sm) var(--spacing-sm);
+    margin: 30px auto;
+
 }
 
 /* Tabs */
@@ -270,12 +276,24 @@
     height: 100%;
 }
 
-.slide {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
+.slide  {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background-size: cover;
+  background-position: center 10%;
+}
+
+.slide--0 {
+    background-image: url("../images/slide_1.png");
+}
+
+.slide--1 {
+    background-image: url("../images/slide_2.png");
+}
+
+.slide--2 {
+    background-image: url("../images/slide_3.jpg");
 }
 
 .slide__content {

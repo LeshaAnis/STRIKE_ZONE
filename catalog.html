@@ -13,7 +13,7 @@
         <div class="header__top-bar">
             <div class="container top-bar">
                 <div class="top-bar__contacts">
-                    <a href="tel:+79991234567" class="top-bar__link">+7 (999) 123-45-67</a>
+                    <a href="tel:+79991234567" class="top-bar__link">+7 (999) 999-99-99</a>
                     <span class="top-bar__link">Пн-Вс: 10:00-21:00</span>
                 </div>
                 <nav class="top-bar__nav">
@@ -117,85 +117,85 @@
                         <h2 class="filter__title">Фильтры</h2>
                         
                         <div class="filter__group">
-                            <button class="filter__group-header" aria-expanded="true">
+                            <button class="filter__group-header" data-filter="price" aria-expanded="true">
                                 <span class="filter__group-title">Цена</span>
                                 <span class="filter__arrow">
                                     <img src="images/icons/arrow-down.png" alt="" class="filter__arrow-icon">
                                 </span>
                             </button>
-                            <div class="filter__group-content filter__group-content--active">
+                            <div class="filter__group-content filter__group-content--active" data-filter-content="price">
                                 <div class="filter__price">
                                     <div class="filter__price-inputs">
-                                        <input type="number" class="filter__price-input" placeholder="От" min="0">
+                                        <input type="number" class="filter__price-input" placeholder="От" min="0" value="0">
                                         <span>—</span>
-                                        <input type="number" class="filter__price-input" placeholder="До" min="0">
+                                        <input type="number" class="filter__price-input" placeholder="До" min="0" value="0">
                                     </div>
-                                    <input type="range" class="filter__range" min="0" max="100000" value="50000">
+                                    <input type="range" class="filter__range" min="0" max="100000" value="0">
                                 </div>
                             </div>
                         </div>
                         
                         <div class="filter__group">
-                            <button class="filter__group-header" aria-expanded="true">
+                            <button class="filter__group-header" data-filter="type" aria-expanded="true">
                                 <span class="filter__group-title">Тип</span>
                                 <span class="filter__arrow">
                                     <img src="images/icons/arrow-down.png" alt="" class="filter__arrow-icon">
                                 </span>
                             </button>
-                            <div class="filter__group-content filter__group-content--active">
+                            <div class="filter__group-content filter__group-content--active" data-filter-content="type">
                                 <label class="filter__checkbox">
-                                    <input type="checkbox" checked>
+                                    <input type="checkbox" name="type" value="rifle">
                                     <span>Автоматы</span>
                                 </label>
                                 <label class="filter__checkbox">
-                                    <input type="checkbox" checked>
+                                    <input type="checkbox" name="type" value="pistol">
                                     <span>Пистолеты</span>
                                 </label>
                                 <label class="filter__checkbox">
-                                    <input type="checkbox" checked>
+                                    <input type="checkbox" name="type" value="sniper">
                                     <span>Снайперские</span>
                                 </label>
                                 <label class="filter__checkbox">
-                                    <input type="checkbox" checked>
+                                    <input type="checkbox" name="type" value="smg">
                                     <span>Пистолеты-пулемёты</span>
                                 </label>
                             </div>
                         </div>
                         
                         <div class="filter__group">
-                            <button class="filter__group-header" aria-expanded="true">
+                            <button class="filter__group-header" data-filter="brand" aria-expanded="true">
                                 <span class="filter__group-title">Бренд</span>
                                 <span class="filter__arrow">
                                     <img src="images/icons/arrow-down.png" alt="" class="filter__arrow-icon">
                                 </span>
                             </button>
-                            <div class="filter__group-content filter__group-content--active">
+                            <div class="filter__group-content filter__group-content--active" data-filter-content="brand">
                                 <label class="filter__checkbox">
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="brand" value="tm">
                                     <span>Tokyo Marui</span>
                                 </label>
                                 <label class="filter__checkbox">
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="brand" value="gg">
                                     <span>G&G Armament</span>
                                 </label>
                                 <label class="filter__checkbox">
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="brand" value="vfc">
                                     <span>VFC</span>
                                 </label>
                                 <label class="filter__checkbox">
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="brand" value="lct">
                                     <span>LCT</span>
                                 </label>
                                 <label class="filter__checkbox">
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="brand" value="cyma">
                                     <span>Cyma</span>
                                 </label>
                             </div>
                         </div>
                         
                         <div class="filter__actions">
-                            <button class="btn btn--primary btn--full">Применить</button>
-                            <button class="btn btn--secondary btn--full">Сбросить</button>
+                            <button class="btn btn--primary btn--full" id="applyFilters">Применить</button>
+                            <button class="btn btn--secondary btn--full" id="resetFilters">Сбросить</button>
                         </div>
                     </div>
                 </aside>
@@ -215,7 +215,8 @@
                     </div>
 
                     <div class="products-grid products-grid--catalog">
-                        <article class="product-card">
+                        <!-- Автоматы -->
+                        <article class="product-card" data-type="rifle" data-brand="lct" data-price="28900" data-category="Автоматы">
                             <a href="product.html?id=1" class="product-card__link">
                                 <div class="product-card__image">
                                     <img src="images/products/ak-74m.png" alt="AK-74M">
@@ -228,8 +229,9 @@
                             </div>
                             <button class="btn btn--primary btn--full" data-product-id="1">В корзину</button>
                         </article>
-                        <article class="product-card">
-                            <a href="product.html?id=2" class="product-card__link">
+                        
+                        <article class="product-card" data-type="rifle" data-brand="gg" data-price="32500" data-category="Автоматы">
+                            <a href="product_M4A1.html" class="product-card__link">
                                 <div class="product-card__image">
                                     <img src="images/products/m4a1.png" alt="M4A1 RIS">
                                     <span class="product-card__badge">ХИТ</span>
@@ -241,7 +243,9 @@
                             </div>
                             <button class="btn btn--primary btn--full" data-product-id="2">В корзину</button>
                         </article>
-                        <article class="product-card">
+                        
+                        <!-- Пистолеты -->
+                        <article class="product-card" data-type="pistol" data-brand="tm" data-price="12900" data-category="Пистолеты">
                             <a href="product.html?id=3" class="product-card__link">
                                 <div class="product-card__image">
                                     <img src="images/products/glock-17.png" alt="Glock 17">
@@ -253,7 +257,9 @@
                             </div>
                             <button class="btn btn--primary btn--full" data-product-id="3">В корзину</button>
                         </article>
-                        <article class="product-card">
+                        
+                        <!-- Пистолеты-пулемёты -->
+                        <article class="product-card" data-type="smg" data-brand="cyma" data-price="24500" data-category="Пистолеты-пулемёты">
                             <a href="product.html?id=4" class="product-card__link">
                                 <div class="product-card__image">
                                     <img src="images/products/mp5a5.png" alt="MP5A5">
@@ -265,7 +271,9 @@
                             </div>
                             <button class="btn btn--primary btn--full" data-product-id="4">В корзину</button>
                         </article>
-                        <article class="product-card">
+                        
+                        <!-- Автоматы -->
+                        <article class="product-card" data-type="rifle" data-brand="lct" data-price="45900" data-category="Автоматы">
                             <a href="product.html?id=5" class="product-card__link">
                                 <div class="product-card__image">
                                     <img src="images/products/ak-12.png" alt="AK-12">
@@ -278,7 +286,8 @@
                             </div>
                             <button class="btn btn--primary btn--full" data-product-id="5">В корзину</button>
                         </article>
-                        <article class="product-card">
+                        
+                        <article class="product-card" data-type="rifle" data-brand="vfc" data-price="52000" data-category="Автоматы">
                             <a href="product.html?id=6" class="product-card__link">
                                 <div class="product-card__image">
                                     <img src="images/products/mcx.png" alt="SIG MCX">
@@ -291,7 +300,8 @@
                             </div>
                             <button class="btn btn--primary btn--full" data-product-id="6">В корзину</button>
                         </article>
-                        <article class="product-card">
+                        
+                        <article class="product-card" data-type="rifle" data-brand="cyma" data-price="23900" data-category="Автоматы">
                             <a href="product.html?id=9" class="product-card__link">
                                 <div class="product-card__image">
                                     <img src="images/products/g36c.png" alt="G36C">
@@ -305,7 +315,9 @@
                             </div>
                             <button class="btn btn--primary btn--full" data-product-id="9">В корзину</button>
                         </article>
-                        <article class="product-card">
+                        
+                        <!-- Снайперские -->
+                        <article class="product-card" data-type="sniper" data-brand="cyma" data-price="26250" data-category="Снайперские">
                             <a href="product.html?id=11" class="product-card__link">
                                 <div class="product-card__image">
                                     <img src="images/products/vsr-10.png" alt="VSR-10">
@@ -319,7 +331,9 @@
                             </div>
                             <button class="btn btn--primary btn--full" data-product-id="11">В корзину</button>
                         </article>
-                        <article class="product-card">
+                        
+                        <!-- Пистолеты-пулемёты -->
+                        <article class="product-card" data-type="smg" data-brand="cyma" data-price="26600" data-category="Пистолеты-пулемёты">
                             <a href="product.html?id=12" class="product-card__link">
                                 <div class="product-card__image">
                                     <img src="images/products/p90.png" alt="P90">
@@ -333,21 +347,54 @@
                             </div>
                             <button class="btn btn--primary btn--full" data-product-id="12">В корзину</button>
                         </article>
+                        
+                        <!-- Пистолеты -->
+                        <article class="product-card" data-type="pistol" data-brand="tm" data-price="12665" data-category="Пистолеты">
+                            <a href="product.html?id=10" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="images/products/m1911.png" alt="M1911A1">
+                                    <span class="product-card__badge product-card__badge--sale">-15%</span>
+                                </div>
+                                <h3 class="product-card__title">Пистолет M1911A1</h3>
+                            </a>
+                            <div class="product-card__price">
+                                <span class="product-card__old">14 900 ₽</span>
+                                <span class="product-card__current">12 665 ₽</span>
+                            </div>
+                            <button class="btn btn--primary btn--full" data-product-id="10">В корзину</button>
+                        </article>
+                        
+                        <!-- Автоматы -->
+                        <article class="product-card" data-type="rifle" data-brand="vfc" data-price="48500" data-category="Автоматы">
+                            <a href="product.html?id=7" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="images/products/hk416.png" alt="HK416 A5">
+                                    <span class="product-card__badge product-card__badge--new">NEW</span>
+                                </div>
+                                <h3 class="product-card__title">HK416 A5</h3>
+                            </a>
+                            <div class="product-card__price">
+                                <span class="product-card__current">48 500 ₽</span>
+                            </div>
+                            <button class="btn btn--primary btn--full" data-product-id="7">В корзину</button>
+                        </article>
+                        
+                        <!-- Пистолеты -->
+                        <article class="product-card" data-type="pistol" data-brand="aa" data-price="14900" data-category="Пистолеты">
+                            <a href="product.html?id=8" class="product-card__link">
+                                <div class="product-card__image">
+                                    <img src="images/products/aap-01.png" alt="Action Army AAP-01">
+                                    <span class="product-card__badge product-card__badge--new">NEW</span>
+                                </div>
+                                <h3 class="product-card__title">Action Army AAP-01</h3>
+                            </a>
+                            <div class="product-card__price">
+                                <span class="product-card__current">14 900 ₽</span>
+                            </div>
+                            <button class="btn btn--primary btn--full" data-product-id="8">В корзину</button>
+                        </article>
                     </div>
 
-                    <nav class="pagination" aria-label="Страницы каталога">
-                        <a href="#" class="pagination__link pagination__link--disabled" aria-label="Предыдущая страница">
-                            <img src="images/icons/arrow-left.png" alt="Назад" class="pagination__icon">
-                        </a>
-                        <a href="#" class="pagination__link pagination__link--active" aria-current="page">1</a>
-                        <a href="#" class="pagination__link">2</a>
-                        <a href="#" class="pagination__link">3</a>
-                        <span class="pagination__dots">...</span>
-                        <a href="#" class="pagination__link">10</a>
-                        <a href="#" class="pagination__link" aria-label="Следующая страница">
-                            <img src="images/icons/arrow-right.png" alt="Вперёд" class="pagination__icon">
-                        </a>
-                    </nav>
                 </div>
             </div>
         </div>
@@ -381,19 +428,19 @@
                 <div class="footer__column">
                     <h3 class="footer__title">Контакты</h3>
                     <ul class="footer__list footer__list--contacts">
-                        <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+                        <li><a href="tel:+79991234567">+7 (999) 999-99-99</a></li>
                         <li><a href="mailto:info@strikezone.ru">info@strikezone.ru</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer__bottom">
-                <p class="footer__copyright">2024 STRIKE ZONE</p>
+                <p class="footer__copyright">2025 STRIKE ZONE</p>
             </div>
         </div>
     </footer>
 
     <script src="js/cart.js"></script>
     <script src="js/navigation.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/filters.js"></script>
 </body>
 </html>
