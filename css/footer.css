@@ -1,0 +1,70 @@
+/**
+ * ==========================================================================
+ * FOOTER STYLES - STRIKE ZONE E-commerce
+ * ==========================================================================
+ */
+
+.footer {
+    background-color: var(--color-text);
+    color: white;
+    padding: var(--spacing-xl) 0 var(--spacing-md);
+}
+
+.footer__main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.footer__column {
+    padding: 0 var(--spacing-sm);
+}
+
+.footer__text {
+    color: rgba(255, 255, 255, 0.7);
+    margin: var(--spacing-sm) 0;
+    line-height: 1.6;
+}
+
+.footer__title {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.footer__list a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color var(--transition);
+}
+
+.footer__list a:hover {
+    color: white;
+}
+
+.footer__list--contacts {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer__list--contacts li {
+    padding: 0.25rem 0;
+}
+
+.footer__bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__copyright {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: var(--font-size-sm);
+}
