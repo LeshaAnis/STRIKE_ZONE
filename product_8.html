@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Страйкбольный автомат AK-74M - профессиональный электропневматический привод высокого качества.">
+    <title>Снайперская винтовка VSR-10 - STRIKE ZONE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header__top-bar">
+            <div class="container top-bar">
+                <div class="top-bar__contacts">
+                    <a href="tel:+79991234567" class="top-bar__link">+7 (999) 999-99-99</a>
+                    <span class="top-bar__link">Пн-Вс: 10:00-21:00</span>
+                </div>
+                <nav class="top-bar__nav">
+                    <a href="catalog.html" class="top-bar__link">Каталог</a>
+                    <a href="about.html" class="top-bar__link">О нас</a>
+                </nav>
+            </div>
+        </div>
+        <div class="header__main">
+            <div class="container header__content">
+                <button class="header__burger" id="burgerBtn" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <a href="index.html" class="logo">
+                    <img src="images/logo/logo.png" alt="STRIKE ZONE" class="logo__img">
+                    <span class="logo__text">STRIKE ZONE</span>
+                </a>
+                <button class="btn btn--catalog" id="catalogBtn">
+                    <img src="images/icons/menu.png" alt="" class="btn__icon">
+                    Каталог
+                </button>
+                <button class="header__search-btn" id="searchBtn" aria-label="Поиск">
+                    <img src="images/icons/search.png" alt="Поиск">
+                </button>
+                <div class="header__actions">
+                    <a href="auth.html" class="header__action" aria-label="Личный кабинет">
+                        <img src="images/icons/user.png" alt="Аккаунт">
+                    </a>
+                    <a href="cart.html" class="header__action header__action--cart" aria-label="Корзина">
+                        <img src="images/icons/cart.png" alt="Корзина">
+                        <span class="header__action-badge" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+            <nav class="mega-menu" id="megaMenu">
+                <div class="container mega-menu__content">
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Автоматы</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html?category=ak">АК-серия</a></li>
+                            <li><a href="catalog.html?category=m4">M4/M16</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Пистолеты</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html?category=glock">Glock</a></li>
+                            <li><a href="catalog.html?category=1911">1911</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Снайперские</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html?category=vsr10">VSR-10</a></li>
+                            <li><a href="catalog.html?category=l96">L96</a></li>
+                        </ul>
+                    </div>
+                    <div class="mega-menu__column">
+                        <h3 class="mega-menu__title">Аксессуары</h3>
+                        <ul class="mega-menu__list">
+                            <li><a href="catalog.html?category=optics">Оптика</a></li>
+                            <li><a href="catalog.html?category=magazines">Магазины</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="search-modal" id="searchModal">
+        <div class="search-modal__overlay"></div>
+        <div class="search-modal__content">
+            <button class="search-modal__close" id="searchClose">
+                <img src="images/icons/close.png" alt="Закрыть" class="search-modal__close-icon">
+            </button>
+            <form class="search-form" action="catalog.html">
+                <input type="search" class="search-form__input" name="q" placeholder="Найти товар...">
+                <button type="submit" class="search-form__btn">Найти</button>
+            </form>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                <a href="index.html" class="breadcrumbs__link">Главная</a>
+                <span class="breadcrumbs__separator">/</span>
+                <a href="catalog.html" class="breadcrumbs__link">Каталог</a>
+                <span class="breadcrumbs__separator">/</span>
+                <span class="breadcrumbs__current">Снайперская винтовка VSR-10</span>
+            </nav>
+
+            <article class="product">
+                <div class="product__gallery">
+                    <div class="product__main-image">
+                        <img src="https://placehold.co/600x400?text=VSR-10" alt="Страйкбольный автомат AK-74M" id="mainImage">
+                    </div>
+                    <div class="product__thumbnails">
+                        <button class="product__thumbnail product__thumbnail--active">
+                            <img src="https://placehold.co/600x400?text=VSR-10" alt="AK-74M вид 1">
+                        </button>
+                        <button class="product__thumbnail">
+                            <img src="https://placehold.co/600x400?text=VSR-10" alt="AK-74M вид 2">
+                        </button>
+                        <button class="product__thumbnail">
+                            <img src="https://placehold.co/600x400?text=VSR-10" alt="AK-74M вид 3">
+                        </button>
+                        <button class="product__thumbnail">
+                            <img src="https://placehold.co/600x400?text=VSR-10" alt="AK-74M вид 4">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product__info">
+                    <h1 class="product__title">Снайперская винтовка VSR-10</h1>
+                    
+                    <div class="product__meta">
+                        <span class="product__sku">Артикул: SKU-008</span>
+                        <span class="product__availability product__availability--in-stock">В наличии</span>
+                    </div>
+
+                    <div class="product__price-block">
+                        <span class="product__price">26 250 ₽</span>
+                    </div>
+
+                    <div class="product__options">
+                        <div class="product__option">
+                            <span class="product__option-label">Цвет:</span>
+                            <div class="product__option-buttons">
+                                <button class="product__option-btn product__option-btn--active">Чёрный</button>
+                                <button class="product__option-btn">Песочный</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product__quantity">
+                        <span class="product__quantity-label">Количество:</span>
+                        <div class="quantity-selector">
+                            <button class="quantity-selector__btn" aria-label="Уменьшить количество">-</button>
+                            <input type="number" class="quantity-selector__input" id="productQty" value="1" min="1" max="10">
+                            <button class="quantity-selector__btn" aria-label="Увеличить количество">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product__actions">
+                        <button class="btn btn--primary btn--large" id="addToCart">Добавить в корзину</button>
+                        <button class="btn btn--secondary btn--icon" aria-label="Добавить в избранное">
+                            <img src="images/icons/heart.png" alt="В избранное" class="product__action-icon">
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <section class="product-details">
+                <div class="tabs" id="productDetailTabs">
+                    <div class="tabs__header">
+                        <button class="tabs__btn tabs__btn--active" data-tab="description">Описание</button>
+                        <button class="tabs__btn" data-tab="specs">Характеристики</button>
+                        <button class="tabs__btn" data-tab="reviews">Отзывы (12)</button>
+                    </div>
+
+                    <div class="tabs__pane tabs__pane--active" data-pane="description">
+                        <div class="product-description">
+<h3>Описание товара</h3>
+<p>Легендарная снайперская винтовка.</p>
+                            
+                            <h4>Особенности:</h4>
+                            <ul>
+                                <li>Металлический корпус ресивера</li>
+                                <li>Полимерный приклад и цевьё</li>
+                                <li>Боковая планка для крепления оптики</li>
+                                <li>Регулируемый хоп-ап</li>
+                                <li>Высокоскоростной мотор</li>
+                            </ul>
+                            
+                            <p>Идеально подходит как для начинающих, так и для опытных игроков. Надёжная механика и качественные материалы обеспечивают долгий срок службы.</p>
+                        </div>
+                    </div>
+
+                    <div class="tabs__pane" data-pane="specs">
+                        <table class="specs-table">
+                            <tr>
+                                <td class="specs-table__label">Длина</td>
+                                <td class="specs-table__value">940 мм</td>
+                            </tr>
+                            <tr>
+                                <td class="specs-table__label">Вес</td>
+                                <td class="specs-table__value">3200 г</td>
+                            </tr>
+                            <tr>
+                                <td class="specs-table__label">Ёмкость магазина</td>
+                                <td class="specs-table__value">500 шаров</td>
+                            </tr>
+                            <tr>
+                                <td class="specs-table__label">Скорость шара</td>
+                                <td class="specs-table__value">360-380 fps</td>
+                            </tr>
+                            <tr>
+                                <td class="specs-table__label">Тип привода</td>
+                                <td class="specs-table__value">AEG (электро)</td>
+                            </tr>
+                            <tr>
+                                <td class="specs-table__label">Материал корпуса</td>
+                                <td class="specs-table__value">Металл/полимер</td>
+                            </tr>
+                            <tr>
+                                <td class="specs-table__label">Аккумулятор</td>
+                                <td class="specs-table__value">Li-Po 11.1V</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="tabs__pane" data-pane="reviews">
+                        <div class="review">
+                            <div class="review__header">
+                                <span class="review__author">Алексей К.</span>
+                                <span class="review__rating">5/5</span>
+                                <span class="review__date">15.11.2024</span>
+                            </div>
+                            <p class="review__text">Отличный привод! Брал для постоянных игр, работает как часы. Качество сборки на высоте, хоп-ап настраивается легко. Рекомендую!</p>
+                        </div>
+                        <div class="review">
+                            <div class="review__header">
+                                <span class="review__author">Дмитрий В.</span>
+                                <span class="review__rating">4/5</span>
+                                <span class="review__date">10.11.2024</span>
+                            </div>
+                            <p class="review__text">Хороший автомат за свои деньги. Единственный минус — аккумулятор в комплекте слабоват, лучше сразу брать помощнее.</p>
+                        </div>
+                        <div class="review">
+                            <div class="review__header">
+                                <span class="review__author">Игорь М.</span>
+                                <span class="review__rating">5/5</span>
+                                <span class="review__date">05.11.2024</span>
+                            </div>
+                            <p class="review__text">Уже второй сезон играю этим приводом. Ни разу не подводил. Точность отличная, дальность боя впечатляет.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <div class="footer__column">
+                    <a href="index.html" class="logo logo--footer">
+                        <img src="images/logo/logo.png" alt="STRIKE ZONE" class="logo__img">
+                        <span class="logo__text">STRIKE ZONE</span>
+                    </a>
+                    <p class="footer__text">Профессиональное страйкбольное оружие и снаряжение.</p>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Каталог</h3>
+                    <ul class="footer__list">
+                        <li><a href="catalog.html?category=rifles">Автоматы</a></li>
+                        <li><a href="catalog.html?category=pistols">Пистолеты</a></li>
+                        <li><a href="catalog.html?category=snipers">Снайперские</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Информация</h3>
+                    <ul class="footer__list">
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="cart.html">Корзина</a></li>
+                    </ul>
+                </div>
+                <div class="footer__column">
+                    <h3 class="footer__title">Контакты</h3>
+                    <ul class="footer__list footer__list--contacts">
+                        <li><a href="tel:+79991234567">+7 (999) 999-99-99</a></li>
+                        <li><a href="mailto:info@strikezone.ru">info@strikezone.ru</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">2025 STRIKE ZONE</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>
